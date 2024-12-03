@@ -4,6 +4,9 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
 import { CutTextPipe } from './pipes/cut-text.pipe';
 import { SortDataPipe } from './pipes/sort-data.pipe';
 import { CustomJsonPipe } from './pipes/custom-json.pipe';
+import { ChildComponent } from './components/child/child.component';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -15,14 +18,10 @@ import { CustomJsonPipe } from './pipes/custom-json.pipe';
     CutTextPipe,
     SortDataPipe,
     CustomJsonPipe,
+    ChildComponent,
+    CommonModule
   ],
 })
 export class AppComponent {
-  ageOfUsers = [{ age: 19 }, { age: 17 }, { age: 27 }];
 
-  constructor() {
-    setTimeout(() => {
-      this.ageOfUsers = [...this.ageOfUsers, { age: 13 }];
-    }, 3000);
-  }
 }

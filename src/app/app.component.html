@@ -1,1 +1,17 @@
-<p>{{ageOfUsers | sortData: 'age' | customJson}}</p>
+<p>Hip!</p>
+<ng-container
+  *ngTemplateOutlet="
+    test;
+    context: { first: 'hello', $implicit: 'World', someText: '!' }
+  "
+>
+  <span>asdasdasdasdasdasdasdasdasd</span>
+</ng-container>
+<p>Hooray!</p>
+
+<ng-template #test let-item let-firstItem="first" let-someText="someText">
+  <p>Hip!</p>
+  <p>{{ item }}</p>
+  <p>{{ firstItem }}</p>
+  <p>{{ someText }}</p>
+</ng-template>

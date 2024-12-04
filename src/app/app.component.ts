@@ -8,6 +8,5 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
 })
 export class AppComponent {
-  toggler: boolean = true;
-  arr: any[] = ['text', 123, true, [1, 'abc'], NaN, Symbol];
+  color: string = 'orange'
 }

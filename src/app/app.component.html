@@ -1,22 +1,3 @@
-<!-- <p *ngIf="toggler then test else test2">asdasdasdasdasdasdasdasd</p>
+<p [ngClass]="{ red: true, blue: true }">asdasdasdasdas</p>
 
-<button (click)="toggler = !toggler">button</button>
-
-<ng-template #test>
-  <p>text</p>
-</ng-template>
-
-<ng-template #test2>
-  <p>text2</p>
-</ng-template> -->
-
-<!-- <div *ngFor="let item of arr; let eventItem = even; let currentIndex = index">
-  <span *ngIf="eventItem">{{ item }}</span>
-  <span>{{ currentIndex }}</span>
-</div> -->
-
-<div *ngFor="let item of arr;" [ngSwitch]="item">
-  <i *ngSwitchCase="123">{{ item }}</i>
-  <b *ngSwitchCase="true">{{ item }}</b>
-  <span *ngSwitchDefault>{{ item }}</span>
-</div>
+<p [ngStyle]="{ color: 'red' }">asdasdasdasdas</p>

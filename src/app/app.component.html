@@ -1,17 +1,22 @@
-<p>Hip!</p>
-<ng-container
-  *ngTemplateOutlet="
-    test;
-    context: { first: 'hello', $implicit: 'World', someText: '!' }
-  "
->
-  <span>asdasdasdasdasdasdasdasdasd</span>
-</ng-container>
-<p>Hooray!</p>
+<!-- <p *ngIf="toggler then test else test2">asdasdasdasdasdasdasdasd</p>
 
-<ng-template #test let-item let-firstItem="first" let-someText="someText">
-  <p>Hip!</p>
-  <p>{{ item }}</p>
-  <p>{{ firstItem }}</p>
-  <p>{{ someText }}</p>
+<button (click)="toggler = !toggler">button</button>
+
+<ng-template #test>
+  <p>text</p>
 </ng-template>
+
+<ng-template #test2>
+  <p>text2</p>
+</ng-template> -->
+
+<!-- <div *ngFor="let item of arr; let eventItem = even; let currentIndex = index">
+  <span *ngIf="eventItem">{{ item }}</span>
+  <span>{{ currentIndex }}</span>
+</div> -->
+
+<div *ngFor="let item of arr;" [ngSwitch]="item">
+  <i *ngSwitchCase="123">{{ item }}</i>
+  <b *ngSwitchCase="true">{{ item }}</b>
+  <span *ngSwitchDefault>{{ item }}</span>
+</div>

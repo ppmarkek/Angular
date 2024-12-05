@@ -1,3 +1,5 @@
-<p [ngClass]="{ red: true, blue: true }">asdasdasdasdas</p>
+@if(toggler) {
+<app-child [title]="title"></app-child>
+}
 
-<p [ngStyle]="{ color: 'red' }">asdasdasdasdas</p>
+<button (click)="toggler = !toggler">button</button>

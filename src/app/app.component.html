@@ -1,5 +1,11 @@
-@if(toggler) {
-<app-child [title]="title"></app-child>
-}
+<p #paragrath>Paragrath</p>
 
-<button (click)="toggler = !toggler">button</button>
+<ng-template #template>
+    <p>ng-template</p>
+</ng-template>
+<ng-container *ngTemplateOutlet="template"></ng-container>
+
+<!-- <app-child #component>Lorem ipsum dolor</app-child> -->
+<app-child #paragrath>Lorem ipsum dolor</app-child>
+
+<!-- ======================================== -->

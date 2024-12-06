@@ -1,26 +1,5 @@
-<app-child> Обычный текст </app-child>
-<!-- ===================================== -->
-<app-child>
-  <p #tag>Параграф</p>
-</app-child>
-<!-- <app-child>
-  <ng-template #tag>
-    <p>Элемент ng-template</p>
-  </ng-template>
-</app-child> -->
-<!-- ===================================== -->
-<app-child>
-  <ng-template>
-    <p>Элемент ng-template</p>
-  </ng-template>
-</app-child>
-<!-- ===================================== -->
-<app-child>
-  <app-ng-content-example>Компонент ng-content-example </app-ng-content-example>
-  <app-ng-content-example
-    >Компонент ng-content-example
-    <app-ng-content-example #descendants>
-      Компонент ng-content-example
-    </app-ng-content-example>
-  </app-ng-content-example>
-</app-child>
+<p>text</p>
+
+<!-- <p appCustomDirective style="color: lime" [color]="colorProperty" class="color">directive text</p> -->
+
+<p [appCustomDirective]="colorProperty" (colorChange)="setColor($event)">directive text</p>

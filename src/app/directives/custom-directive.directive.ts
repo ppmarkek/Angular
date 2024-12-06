@@ -10,6 +10,7 @@ import {
 
 @Directive({
   selector: '[appCustomDirective]',
+  exportAs: 'custom'
 })
 export class CustomDirectiveDirective {
   @Input('color') colorProps!: string;
@@ -52,5 +53,7 @@ export class CustomDirectiveDirective {
       '#' +
       (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
     this.colorChange.emit(newColor);
+
+    return newColor
   }
 }

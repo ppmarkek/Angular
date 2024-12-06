@@ -2,4 +2,12 @@
 
 <!-- <p appCustomDirective style="color: lime" [color]="colorProperty" class="color">directive text</p> -->
 
-<p [appCustomDirective]="colorProperty" (colorChange)="setColor($event)">directive text</p>
+<p
+  [appCustomDirective]="colorProperty"
+  #example="custom"
+  (colorChange)="setColor($event)"
+>
+  directive text
+</p>
+
+<app-child [style]="{color: example.getRandomColor()}"></app-child>
